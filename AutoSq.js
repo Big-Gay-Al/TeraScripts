@@ -4,8 +4,9 @@ const JOB_ARCHER = 5;
 
 
 const SKILL_RADIANT_ARROW = 3;
+const SKILL_SEQUENTIAL_FIRE = 22;
 const SKILL_THUNDERBOLT = 29;
-const SKILL_BURNING_HEART = 22;
+
 
 module.exports = function AutoSq(dispatch) {
   let cid;
