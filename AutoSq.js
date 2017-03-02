@@ -50,8 +50,10 @@ module.exports = function AutoSq(dispatch) {
 
   dispatch.hook('sAbnormalityEnd', (event) => {
     if (!enabled || !event.target.equals(cid)) return;
+    
+    
+    
+    
 
-    if (job === JOB_ARCHER && event.id === BUFF_FOCUS) {
-      buff = 0;
-    }
-  });
+    
+    
