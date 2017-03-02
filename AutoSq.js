@@ -7,7 +7,7 @@ const SKILL_RADIANT_ARROW = 3;
 const SKILL_THUNDERBOLT = 29;
 const SKILL_BURNING_HEART = 22;
 
-module.exports = function FastFire(dispatch) {
+module.exports = function AutoSq(dispatch) {
   let cid;
   let job;
   let model;
