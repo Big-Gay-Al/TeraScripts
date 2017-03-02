@@ -50,10 +50,45 @@ module.exports = function AutoSq(dispatch) {
 
   dispatch.hook('sAbnormalityEnd', (event) => {
     if (!enabled || !event.target.equals(cid)) return;
-    
-    
-    
-    
+  }
+});
+  
+//FOR THUNDERBOLT  
+dispatch.hook('cStartSkill', (event) => {
+    if (!enabled || job !== JOB_ARCHER) return;
 
+    const skill = event.skill - 0x4000000;
+    const group = Math.floor(skill / 10000);
+    const hit = skill % 100;
+
+    if (group !== SKILL_THUNDERBOLT) return;
+
+    const speed = aspd;
+    const tbduration=3000 //duration of thunderbolt animation
+    const ping = 180
+  
+
+    setTimeout(tbsq, (tbduration / speed)-ping,event);
+
+
+  });
+  
+        function tbsq(event) {
+          
+          dispatch.toServer('cStartInstanceSkill', {
+          skill: 67329664
+          x: event.x || event.x1,
+          y: event.y || event.y1,
+          z: event.z || event.z1,
+          w: event.w,
+          unk: 0,
+          targets:[],  
+
+    });
+
+
+
+  }
+};
     
     
